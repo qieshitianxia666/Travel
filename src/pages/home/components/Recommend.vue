@@ -4,7 +4,7 @@
       热销推荐
     </div>
     <ul>
-      <li class="item border-bottom" v-for="item of recommendList">
+      <li class="item border-bottom" v-for="item of list">
         <img class="item-img" :src="item.imgUrl" alt="">
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
@@ -19,25 +19,8 @@
 <script>
     export default {
         name: "HomeRecommend",
-        data(){
-          return{
-            recommendList:[{
-              id:'0001',
-              imgUrl:'http://img1.qunarzz.com/sight/p0/1609/7a/7ae8ee7831836095a3.water.jpg_200x200_36727f69.jpg',
-              title:'金海湖风景区',
-              desc:'金海湖风景区金海湖风景区金海湖风景区金海湖风景区金海湖风景区金海湖风景区'
-            },{
-              id:'0002',
-              imgUrl:'http://img1.qunarzz.com/sight/p0/1609/7a/7ae8ee7831836095a3.water.jpg_200x200_36727f69.jpg',
-              title:'金海湖风景区',
-              desc:'金海湖风景区金海湖风景区金海湖风景区金海湖风景区金海湖风景区金海湖风景区'
-            },{
-              id:'0003',
-              imgUrl:'http://img1.qunarzz.com/sight/p0/1609/7a/7ae8ee7831836095a3.water.jpg_200x200_36727f69.jpg',
-              title:'金海湖风景区',
-              desc:'金海湖风景区金海湖风景区金海湖风景区金海湖风景区金海湖风景区金海湖风景区'
-            }]
-          }
+        props:{
+          list:Array
         }
     }
 </script>
